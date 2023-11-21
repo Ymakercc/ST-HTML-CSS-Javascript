@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3其他特性（了解）</title>
+    <!-- css3滤镜filter -->
+    <!-- 语法：filter：函数（）如   filter:blur(5px) blur 模糊处理 值越大越模糊 -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        img {
+            filter: blur(10px);
+            width: 100%;
+            height: 100%;
+        }
+
+        img:hover {
+            filter: blur(0);
+        }
+
+        .father {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .son {
+            width: calc(100%-30px);
+            height: 60px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="夜阑.jpg" alt="">
+    </div>
+
+    <!--计算盒子宽度calc函数 如：子盒子永远比父盒子30px -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

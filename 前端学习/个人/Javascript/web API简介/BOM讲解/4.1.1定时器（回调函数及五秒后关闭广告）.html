@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--JavaScript回调函数是一种常见的编程概念，用于处理异步操作或事件处理。
+        简单地说，回调函数是将一个函数作为参数传递给另一个函数，并在某个特定事件发生或条件满足时执行该函数。-->
+    <!--也可以简单理解为上一件事干完，再回头调用这个函数    -->
+    <!--回调函数演示-->
+    <script>// 模拟一个异步操作，例如从服务器获取数据
+        function fetchData(callback) {
+            setTimeout(function () {
+                const data = "这是从服务器获取的数据";
+                callback(data); // 在操作完成后调用回调函数并传递数据
+            }, 2000); // 模拟2秒延迟
+        }
+
+        // 回调函数，用于处理获取的数据
+        function processData(data) {
+            console.log("处理数据: " + data);
+        }
+
+        // 调用fetchData，并传递processData作为回调函数
+        fetchData(processData);
+
+        //5秒关闭广告案例
+        window.addEventListener('load', function () {
+            var ad = document.querySelector('.ad');
+            setTimeout(function () {
+                ad.style.display = 'none';
+            }, 5000)
+        })
+    </script>
+    <img src="ad.jpg" alt="" class="ad">
+</body>
+
+</html>

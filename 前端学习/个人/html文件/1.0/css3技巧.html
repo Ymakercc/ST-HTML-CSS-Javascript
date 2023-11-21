@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: blue;
+            border-radius: 10px;
+            /* 盒子圆角技巧，后面有四个值：
+            四个值: 第一个值为左上角，第二个值为右上角，第三个值为右下角，第四个值为左下角。
+            三个值: 第一个值为左上角, 第二个值为右上角和左下角，第三个值为右下角。
+            两个值: 第一个值为左上角与右下角，第二个值为右上角与左下角。
+            一个值： 四个圆角值相同。 图片也可用*/
+            height: 200px;
+            width: 200px;
+            /* box-shadow: 20px 20px black; */
+            /* 盒子阴影效果，其后有6个值
+            h-shadow（必需的,水平阴影的位置，允许负值）
+            v-shadow（必需的,垂直阴影的位置，允许负值）
+            blur（可选，模糊距离，阴影模糊半径，值越大，模糊面积越大，阴影就越大越淡。 不能为负值。默认为0 ）模糊效果
+            spread（ 可选，阴影的大小，阴影扩散半径，阴影外延值，取正值时，阴影扩大；取负值时，阴影收缩。默认为0。）阴影扩散效果
+            color（可选，阴影的颜色） 
+            inset（可选，内部阴影）
+            没有指定就都为默认值0*/
+            /* box: shadow 0px 0px 15px 10px rgb(0, 0, 0) inset（可选，内部阴影）; 内部阴影，浮雕，凸起效果*/
+            /* box-shadow: 0px 0px 10px grey; 四周阴影效果 */
+            background-image: linear-gradient(#ffff #000);
+            /* background-image: linear-gradient(direction color1 color2...); 
+            线性渐变（Linear Gradient）- 向下/向上/向左/向右/对角方向
+            径向渐变（Radial Gradient）- 由中心扩散
+            direction为渐变方向的设置：to-left to-right
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));红色从透明到不透明
+            这个为透明渐变
+            #grad {
+            background-image: repeating-linear-gradient(red, yellow 10%, green 20%);0%红色开始到10%处黄色到20%绿色结束，依次循环。
+            这个为重复渐变 */
+            background-image: radial-gradient(circle, red, yellow, green);
+            /* 径向渐变:
+            为了创建一个径向渐变，你也必须至少定义两种颜色结点。
+            也可以指定渐变的中心、形状（圆形或椭圆形）、大小。默认情况下，渐变的中心是 center（表示在中心点），
+            渐变的形状是 ellipse（表示椭圆形，盒子为正方即正圆），渐变的半径大小是size: farthest-corner等（表示到最远的角落）。
+            background-image: radial-gradient(shape size at position, start-color, ..., last-color)  ,at position为圆心位置 
+            默认圆心为center, size: farthest-corner。(red-yellow, yellow-green，渐变区各占半径距离1/2）。
+            closest-side （指定径向渐变的半径长度为从圆心到离圆心最近的边）
+            closest-corner  （指定径向渐变的半径长度为从圆心到离圆心最近的角）
+            farthest-side （指定径向渐变的半径长度为从圆心到离圆心最远的边）
+            farthest-corner  （指定径向渐变的半径长度为从圆心到离圆心最远的角）*/
+        }
+
+        h1 {
+            text-shadow: 2px 2px pink;
+            /* h-shadow	必需。水平阴影的位置。允许负值。
+            v-shadow	必需。垂直阴影的位置。允许负值。
+            blur	可选。模糊的距离。
+            color	可选。*/
+            -webkit-text-stroke: 2px blue;
+            /* text-stroke： text-stroke-width  text-stroke-color ;
+            text-stroke-width:文字的描边厚度
+            text-stroke-color:文字的描边颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>我爱霉霉</div>
+    <h1>我爱霉霉</h1>
+</body>
+
+</html>

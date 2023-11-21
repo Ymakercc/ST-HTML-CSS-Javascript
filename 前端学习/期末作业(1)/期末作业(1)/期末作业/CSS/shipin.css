@@ -1,0 +1,296 @@
+body {
+    color: rgb(239, 239, 239);
+}
+
+#container {
+    width: 810px;
+    margin: 40px auto;
+    height: 347px;
+    position: relative;
+}
+
+#prev {
+    width: 150px;
+    height: 112px;
+    z-index: 5;
+    background: url("../images/prev.png") no-repeat 0 0;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -56px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+#prev:hover {
+    background: url("../images/prev_1.png") no-repeat 0 0;
+    transform: translateX(15px);
+}
+
+#prev #prev_text {
+    visibility: hidden;
+    background: url("../images/prev_txt.png") no-repeat 0 0;
+    width: 106px;
+    height: 112px;
+    position: absolute;
+    left: 70px;
+    transition: all .5s linear;
+}
+
+#prev:hover #prev_text {
+    visibility: visible;
+    left: 40px;
+}
+
+#next {
+    width: 150px;
+    height: 112px;
+    z-index: 5;
+    background: url("../images/next.png") no-repeat 80px 0;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -56px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+#next:hover {
+    background: url("../images/next_1.png") no-repeat 80px 0;
+    transform: translateX(-15px);
+}
+
+#next #next_text {
+    visibility: hidden;
+    background: url("../images/next_txt.png") no-repeat 0 0;
+    width: 106px;
+    height: 112px;
+    position: absolute;
+    right: 70px;
+    transition: all .5s linear;
+
+}
+
+#next:hover #next_text {
+    visibility: visible;
+    right: 40px;
+}
+
+#container ul {
+    position: relative;
+    height: 347px;
+    width: 100%;
+}
+
+#container ul li {
+    position: absolute;
+    font-size: 0px;
+    transition: all .5s linear;
+}
+
+#container ul li img {
+    width: 100%;
+}
+
+.pic0 {
+    border: 3px solid white;
+    left: 66px;
+    top: 0px;
+    width: 686px;
+    z-index: 3;
+    opacity: 1;
+}
+
+.pic1 {
+    left: 370px;
+    top: 55px;
+    width: 475px;
+    opacity: .8;
+    z-index: 2;
+}
+
+.pic2 {
+    left: 630px;
+    top: 110px;
+    width: 256px;
+    opacity: .6;
+    z-index: 1;
+}
+
+.pic3 {
+    left: 630px;
+    top: -145px;
+    width: 256px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.pic4 {
+    left: 630px;
+
+    top: -145px;
+    width: 256px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.pic5 {
+    left: 0px;
+    top: -145px;
+    width: 100px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.pic6 {
+    left: -70px;
+    top: 110px;
+    width: 256px;
+    opacity: .6;
+    z-index: 1;
+}
+
+.pic7 {
+    left: -30px;
+    top: 55px;
+    width: 475px;
+    opacity: .8;
+    z-index: 2;
+}
+
+#divv1 {
+    margin: 0 auto;
+    width: 1500px;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: black;
+    background-color: rgb(245, 245, 245);
+    font-size: 30px;
+    border: 1px grey solid;
+    margin-bottom: 30px;
+}
+
+#divz {
+    width: 1300px;
+    height: 500px;
+    margin: 100px auto;
+
+}
+
+#divz ul li {
+    width: 200px;
+    height: 225px;
+    list-style: none;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+#divz ul li div {
+    width: 195px;
+    height: 230px;
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+    border-bottom: rgb(204, 204, 204) 1px solid;
+
+
+}
+
+#divz ul li div a:hover {
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+
+
+
+
+#divz1 {
+    width: 1300px;
+    height: 500px;
+    margin: 100px auto;
+
+}
+
+#divz1 ul li {
+    width: 200px;
+    height: 225px;
+    list-style: none;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+#divz1 ul li div {
+    width: 195px;
+    height: 230px;
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+    border-bottom: rgb(204, 204, 204) 1px solid;
+
+
+}
+
+#divz1 ul li div a:hover {
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+
+
+
+
+
+
+
+#ma {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 30px;
+
+}
+
+#ma ol {
+    margin: 0;
+    padding: 0;
+}
+
+#ma li {
+    width: 30px;
+    height: 30px;
+    border: black solid 1px;
+    color: black;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+
+}
+
+#ma li a:hover {
+    color: aliceblue;
+
+}
+
+#ma li:hover {
+    background-color: black;
+}

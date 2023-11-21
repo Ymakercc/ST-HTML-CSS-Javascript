@@ -1,0 +1,38 @@
+.about {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.about h2 {
+    position: relative;
+    font-size: 28px;
+    color: rgb(102, 102, 102);
+    margin-left: 20px;
+    z-index: -1;
+}
+
+.about h2::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -3px;
+    display: block;
+    width: 8px;
+    height: 28px;
+    background-color: rgb(102, 102, 102);
+}
+
+.about .us {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0px;
+    color: rgb(102, 102, 102);
+    line-height: 1.5em;
+}
+
+.about .lx {
+    font-size: 16px;
+    margin: 20px 50px;
+    color: rgb(102, 102, 102);
+    line-height: 1.5em;
+}

@@ -1,0 +1,90 @@
+ #div1,
+ #div2,
+ #div3,
+ #div4,
+ #div5,
+ #div6 {
+     width: 1000px;
+     margin: 0 auto;
+     border-bottom: 1px grey solid;
+     margin-bottom: 30px;
+     margin-top: 30px;
+ }
+
+ #div22,
+ #div44,
+ #div66 {
+     margin-left: 10px;
+ }
+
+ .img1,
+ .img3 {
+     float: left;
+     width: 430px;
+ }
+
+ .img2,
+ .img4 {
+     float: right;
+     width: 430px;
+     text-align: right;
+ }
+
+ .neirong {
+     width: 1000px;
+     height: 273px;
+     font-size: 18px;
+     line-height: 26px;
+ }
+
+ .neirong h3 {
+     color: black;
+     margin: 0;
+     padding: 3px;
+ }
+
+ #yi,
+ #er,
+ #san,
+ #si,
+ #wu,
+ #liu {
+     color: rgb(64, 64, 247)
+ }
+
+ #ma {
+     width: 200px;
+     height: 30px;
+     margin: 0 auto;
+     margin-top: 10px;
+     margin-bottom: 40px;
+
+ }
+
+ #ma ol {
+     margin: 0;
+     padding: 0;
+ }
+
+ #ma li {
+     width: 30px;
+     height: 30px;
+     border: black solid 1px;
+     color: black;
+     float: left;
+     line-height: 30px;
+     text-align: center;
+     font-size: 20px;
+     border-radius: 10px;
+     margin-left: 10px;
+
+ }
+
+ #ma li a:hover {
+     color: aliceblue;
+
+ }
+
+ #ma li:hover {
+     background-color: black;
+ }

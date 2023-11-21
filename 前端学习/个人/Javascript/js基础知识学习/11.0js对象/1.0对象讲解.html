@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象讲解</title>
+    <script>
+        //对象可以简单理解为一组相关属性和方法的集合
+        //创建对象的方法
+        //1.0利用字面量创建对象
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            sayHello: function () {
+                console.log("Hello!");
+            }
+        };
+
+        //2.0利用new Object创建对象
+        var person = new Object();
+        person.firstName = "John",
+            person.lastName = "Doe",
+            person.age = 30,
+            person.sayHello = function () {
+                console.log("Hello!");
+            }
+        //3.0利用构造函数创建对象
+        //(1)定义构造函数：
+        //构造函数是一个普通的函数，但是按照惯例，它的名称通常以大写字母开头，以区分普通函数。构造函数的主要任务是初始化对象的属性和方法。
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.sayHello = function () {
+                console.log("Hello, my name is " + this.firstName);
+            };
+        }
+        //(2)创建对象实例：
+        //要创建一个对象实例，您需要使用 new 关键字，后跟构造函数的调用，并传递所需的参数。这将创建一个新的对象，然后在构造函数中使用传递的参数初始化对象的属性。
+        var person1 = new Person("John", "Doe", 30);
+        var person2 = new Person("Jane", "Smith", 25);
+        person.sayHello(); // 输出: Hello, my name is John
+
+        //4.0利用class类创建对象
+        //(1)定义类：
+        //在ES6中，您可以使用 class 关键字来定义一个类。类中包含构造函数（constructor）以及类的方法。
+        class People {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            sayHello() {
+                console.log("Hello, my name is " + this.firstName);
+            }
+        }
+        //(2)创建对象实例：
+        //要创建一个类的对象实例，您只需使用 new 关键字，后跟类的名称，并传递构造函数所需的参数。
+        var People1 = new People("John", "Doe", 30);
+        var People2 = new People("Jane", "Smith", 25);
+
+        //遍历对象属性for in
+        for (var k in People) {
+            console.log(k);//得到属性名
+            console.log(People[k]);//得到属性值
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

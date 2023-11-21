@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '微软雅黑';
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.d0 {
+    width: 1548px;
+    margin: 0px auto;
+}
+
+.header {
+    height: 50px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.logo {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-image: url(logo.jpg);
+    margin-top: 10px;
+}
+
+.nav {
+    float: right;
+    margin-top: 27px;
+}
+
+.u1 li {
+    float: left;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    width: 232px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.u1 li:hover a {
+    color: red;
+}
+
+.container {
+    width: 1548px;
+}
+
+.fenmian {
+    height: 600px;
+    background-image: url(banner.jpg);
+    width: 1548px;
+    margin-top: 25px;
+    margin-right: 372px;
+}
+
+.fenmian2 h1 {
+    font-size: 18px;
+}
+
+.fenmian2 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left,
+.middle,
+.right {
+    float: left;
+    width: 516px;
+    height: 616px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer {
+    margin-top: 150px;
+
+}
+
+.d1 {
+    float: left;
+    width: 100px;
+    height: 360px;
+}

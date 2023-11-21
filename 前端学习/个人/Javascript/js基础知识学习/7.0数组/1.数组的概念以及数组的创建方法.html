@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的概念以及创建方法</title>
+    <script>
+        //概念
+        //数组是一组数据的集合 
+        //js创建数组
+        //1.0利用new关键字创建数组
+        var arr = new Array();
+        //2.0利用数组字面量创建数组
+        var names = [];
+
+        //数组的索引  数组名[索引号]  索引号从0开始
+
+        //遍历数组 数组名.length
+        var arr = ['red', 'green', 'blue']
+        for (var i = 0; i < 3; i++) {
+            console.log(arr[i]);
+        }
+
+        //案例 计算数组元素的和并计算平均值
+        var arr = [1, 2, 3, 4, 5, 6];
+        var sum = 0;
+        var average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        console.log(sum);
+        console.log(average);
+
+        //案例2.0求一个数组里的最大值
+        var ymaker = [1, 25, 45, 52, 12, 3, 0, 8, 96, 44];
+        var max = arr[0];
+        for (var i = 1; i < ymaker.length; i++) {
+            if (ymaker[i] > max) {
+                max = ymaker[i];
+            }
+        }
+        console.log('该数组的最大值是' + max);
+
+        //案例2.0
+        var names = ['Taylor', 'Swift']
+        var str = '';
+        var sep = '!';
+        for (var i = 0; i < names.length; i++) {
+            str += names[i] + sep;
+        }
+        console.log(str);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

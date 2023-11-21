@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue和break关键字</title>
+    <script>
+        //continue关键字
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;//跳出当前循环，执行下一次循环
+            }
+            console.log('我吃到第' + i + '个包子');
+        }
+        //break关键字
+        for (var s = 1; s <= 5; s++) {
+            if (s == 3) {
+                break;//跳出循环，循环直接结束
+            }
+            console.log('我吃到了第' + s + '个包子');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

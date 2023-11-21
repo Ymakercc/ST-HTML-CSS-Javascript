@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素</title>
+</head>
+
+<body>
+    <ul>
+        <li>我是你爹</li>
+        <li>我是你爹</li>
+        <li>我是你爹</li>
+        <li>我是你爹</li>
+    </ul>
+    <ol id="ol">
+        <li>woaini</li>
+        <li>woaini</li>
+        <li>woaini</li>
+        <li>woaini</li>
+    </ol>
+    <script>
+        //采用元素名获取元素
+        //返回的是获取过来元素对象的集合，以伪数组的形式呈现
+        //如果想要依次获取里面的元素可以采用遍历的方法
+        //如果该文档中只有一个目标元素返回的也是一个伪数组
+        //如果页面中没有就返回一个空 的伪数组
+        var documents = document.getElementsByTagName('li');
+        console.log(documents);
+        for (var i = 0; i < documents.length; i++) {
+            console.log(documents[i]);
+        }
+
+        //获取某个父元素内部所有指定标签名的子元素（注意：父元素必须是单个对象，获取时不包括父元素自身）
+        //element.getElementsByTagName()
+        var ol = document.getElementById('ol');
+        var olItems = ol.getElementsByTagName('li');
+        console.log(olItems);
+    </script>
+</body>
+
+</html>

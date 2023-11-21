@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件三要素</title>
+</head>
+
+<body>
+    <button id="btn">Ymaker</button>
+    <script>
+        //事件三要素：事件源    事件类型    事件处理程序
+        //（1）事件源：事件被触发的对象
+        //（2）事件类型 如何触发 什么事件 如鼠标点击等
+        //（3）事件处理程序 通过一个函数赋值的方式完成
+        //要求：点击一个按钮，弹出对话框
+        var btn = document.getElementById('btn')
+        btn.onclick = function () {
+            alert('我爱你')
+        }
+
+    </script>
+</body>
+
+</html>

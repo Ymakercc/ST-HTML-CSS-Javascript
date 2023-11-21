@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- 在实际开发中父级盒子在很多情况下不方便给高度，但子盒子在赋予浮动后会脱标最后父盒子的高度就会变为0影响接下来的布局 
+    清除浮动的本质是清除浮动元素造成的影响：清除浮动后，父级会根据浮动的子盒子自动检测高度
+     清除浮动采用的代码clear（left right both）
+     清除浮动的策略：闭合浮动-->
+    <style>
+        .box {
+            width: 600px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            width: 1226px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

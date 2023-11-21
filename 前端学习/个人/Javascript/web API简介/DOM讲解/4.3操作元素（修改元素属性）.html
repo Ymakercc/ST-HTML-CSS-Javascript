@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素属性</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+        }
+
+        div img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="luf1">路飞1</button>
+    <button id="luf2">路飞2</button>
+    <div>
+        <img src="luf1.png" alt="" title="1">
+    </div>
+
+    <script>
+        // 修改元素属性
+        // 1. 获取元素
+        var luf1Button = document.getElementById('luf1');
+        var luf2Button = document.getElementById('luf2');
+        var imgElement = document.querySelector('img');
+
+        // 2. 注册事件
+        luf2Button.onclick = function () {
+            imgElement.src = 'luf2.png';
+            imgElement.title = '2';
+        }
+        luf1Button.onclick = function () {
+            imgElement.src = 'luf1.png';
+            imgElement.title = '1';
+        }
+    </script>
+</body>
+
+</html>

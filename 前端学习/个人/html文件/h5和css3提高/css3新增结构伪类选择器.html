@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css新增结构伪类选择器</title>
+    <!-- 结构伪类选择器是CSS中一种用于选择元素的选择器类型，根据元素在文档结构中的位置来匹配元素。这些选择器基于元素的结构位置而不是特定的属性或属性值。
+
+以下是一些常见的结构伪类选择器：
+
+:first-child - 选择某个元素的第一个子元素。
+:last-child - 选择某个元素的最后一个子元素。
+:nth-child(n) - 选择某个元素的特定子元素，其中n是一个数字，表示要选择的子元素的索引。例如，:nth-child(3)将选择某个元素的第三个子元素。(重要)
+:nth-last-child(n) - 与:nth-child(n)类似，但从元素的末尾开始计算子元素的索引。
+:only-child - 选择只有一个子元素的元素。 -->
+    <style>
+        /* 1.选择ul里的第一个孩子 */
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        /* 2.选择ul里面的最后一个孩子小li */
+        ul li:last-child {
+            background-color: pink;
+        }
+
+        /* 3.选择ul里面的任意一个孩子小li */
+        ul li:nth-child(3) {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+</body>
+
+</html>

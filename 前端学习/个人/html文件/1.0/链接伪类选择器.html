@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 为确保链接伪类选择器的使用正常按照link>visited>hover>actived的顺序来写 口诀love hate
+    实际开发中先对a标签整体设置一个样式再通过伪类选择器来设置自己想要的样式 -->
+    <style>
+        a {
+            color: #000;
+            text-decoration: none;
+            font-size: larger;
+        }
+
+        /* 设置未访问的链接样式 a:link */
+        a:link {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* 设置以访问的链接的样式 a:visited */
+        a:visited {
+            color: rgb(34, 7, 238);
+            text-decoration: none;
+        }
+
+        /* 设置鼠标经过的链接样式 a:hover */
+        a:hover {
+            color: rgb(255, 13, 13);
+            text-decoration: none;
+        }
+
+        /* 选择鼠标正在按下还没有弹起鼠标的链接 a:active */
+        a:active {
+            color: rgb(11, 255, 214);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">霉霉我爱你</a>
+</body>
+
+</html>

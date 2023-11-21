@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指令修饰符</title>
+</head>
+<body>
+    <!-- 通过"."指明一些指令后缀，不同后缀封装了不同的处理操作 → 简化代码
+        常见指令修饰符：
+        ①按键修饰符
+        如： @keyup.enter → 键盘回车监听
+        ②v-model修饰符：
+        如：v-model.trim → 去除首尾空格 
+            v-model.number → 转数字
+        ③事件修饰符：
+        如：@事件名.stop → 阻止冒泡
+            @事件名.prevent → 阻止默认行为 -->
+    <div id="app">
+        <h3>@keyup.enter  →  监听键盘回车事件</h3>
+        <input @keyup.enter="fn" v-model="username" type="text">
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script>
+        const app = new Vue({
+          el: '#app',
+          data: {
+            username: ''
+          },
+          methods: {
+            fn (e) {
+                //.enter等价于封装了如下函数
+              // if (e.key === 'Enter') {
+              //   console.log('键盘回车的时候触发', this.username)
+              // }
+    
+              console.log('键盘回车的时候触发', this.username)
+            }
+          }
+        })
+      </script>
+</body>
+</html>

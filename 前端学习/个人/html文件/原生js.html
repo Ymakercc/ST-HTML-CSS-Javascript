@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Switcher</title>
+    <style>
+      .image-container {
+        width: 100%;
+        height: 777px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container" id="image-container">
+      <img id="image" src="1.png" alt="Image" />
+    </div>
+
+    <script>
+      //获取元素
+      const images = ["1.png", "2.png", "3.png"];
+      let currentIndex = 0;
+      const imageContainer = document.getElementById("image-container");
+      const image = document.getElementById("image");
+
+      //事件注册 滚轮切换图片
+      imageContainer.addEventListener("wheel", (event) => {
+        if (event.deltaY > 0) {
+          currentIndex = (currentIndex + 1) % images.length;
+        } else {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+        }
+
+        image.src = images[currentIndex];
+      });
+    </script>
+  </body>
+</html>

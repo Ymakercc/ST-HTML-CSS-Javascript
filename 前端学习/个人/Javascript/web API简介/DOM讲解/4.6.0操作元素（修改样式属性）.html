@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改样式属性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        //修改样式属性注意事项：
+        //1.Js 里面的样式采取驼峰命名法 比如 fontsize、 backgroundcolor
+        //2.Js 修改 style 样式操作，产生的是行内样式，css 权重比较高
+        //1.获取元素
+        var div = document.querySelector('div');
+        //2.绑定事件 处理程序
+        div.onclick = function () {
+            this.style.backgroundColor = 'purple';
+            this.style.width = '250px';
+        }
+
+    </script>
+</body>
+
+</html>

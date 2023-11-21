@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增数组元素</title>
+    <script>
+        // //1.0修改length长度来增加数组元素
+        // var cooler = ['red', 'green', 'blue'];
+        // cooler.length = 5; //将数组的长度修改为5
+        // //2.0修改索引号新增元素 如果索引号没被占用就增加元素，如果被占用就替换原有元素
+        // var cooler1 = ['red', 'green', 'blue'];
+        // cooler1[3] = 'pink';
+        // console.log(cooler1);
+
+        //新建一个数组，存放10个整数
+        var arr1 = [];
+        for (var i = 0; i < 10; i++) {
+            arr1[i] = i + 1;
+        }
+        console.log(arr1);
+        //案例2.0将数组[1,20,520,30,69,58,12,22]中大于等于10的筛选出来放进一个新的数组
+        var number = [1, 20, 520, 30, 69, 58, 12, 22];
+        var newNumber = [];
+        var j = 0;
+        for (var i = 0; i < number.length; i++) {
+            if (number[i] > 10) {
+                newNumber[j] = number[i];
+                j++;
+            }
+        }
+        console.log(newNumber);
+
+        //方法2
+        var number = [1, 20, 520, 30, 69, 58, 12, 22];
+        var newNumber = [];
+        //刚开始newNumber.length长度为0，.length自动检测数组长度
+        for (var i = 0; i < number.length; i++) {
+            if (number[i] > 10) {
+                newNumber[newNumber.length] = number[i];
+            }
+        }
+        console.log(newNumber);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

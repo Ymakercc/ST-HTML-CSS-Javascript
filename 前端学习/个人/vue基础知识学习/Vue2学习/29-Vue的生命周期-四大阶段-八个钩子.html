@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Vue 生命周期的概念：一个Vue实例从 创建 到 销毁 的整个过程
+         四个生命周期阶段：①创建 ②挂载 ③更新 ④销毁
+        创建阶段：将普通数据处理为响应式数据...   数据创建完成 发送初始化请求
+        挂载阶段：渲染模板                       操作dom
+        更新阶段：数据修改，更新视图(进入一个循环，多次执行)
+        销毁阶段：销毁实例（关闭浏览器） -->
+
+    <!-- Vue生命周期过程中，会自动运行一些函数，被称为 生命周期钩子 → 让开发者可以在 特定阶段 运行自己的代码 
+      钩子：before Create  create（最早的发送渲染的初始化请求）
+            before Mount   mounted（操作dom）
+            before Update  update
+            before Destory destory-->
+
+    <!-- 完整的钩子和函数关系：
+         before Create 创建 create（最早的发送渲染的初始化请求） before Mount 挂载 mounted（操作dom） before Update 更新 update before Destory 销毁 destory-->
+    <div id="app">
+      <h3>{{title}}</h3>
+      <div>
+        <button @click="cuont--">-</button>
+        <span>{{cuont}}</span>
+        <button @click="cuont++">+</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          cuont: 100,
+          title: "计数器",
+        },
+        //1.创建阶段（准备数据）
+        beforeCreate() {
+          console.log("beforeCreate 响应式数据准备好以前", this.cuont);
+        },
+        created() {
+          console.log("create 响应式数据准备好以后", this.cuont);
+          // this.数据名 = 请求回来的数据
+          //可以开始发送初始化渲染请求
+        },
+
+        //2.挂载渲染阶段（渲染模板）
+        beforeMount() {
+          console.log("beforeMount 模板渲染之前");
+          document.querySelector("h3").innerHTML;
+        },
+        mounted() {
+          console.log("mounted 模板渲染之后");
+          document.querySelector("h3").innerHTML;
+          //可以开始操作dom
+        },
+
+        //2.更新阶段(修改数据触发 → 更新视图)
+        beforeUpdate() {
+          console.log(
+            "beforeUpdate 数据修改了，视图还未更新",
+            document.querySelector("span").innerHTML
+          );
+        },
+        updated() {
+          console.log(
+            "update 数据修改了，视图更新",
+            document.querySelector("span").innerHTML
+          );
+        },
+
+        //3.销毁阶段
+        beforeDestroy() {
+          console.log("beforeDestory,卸载前");
+          console.log("清除一些Vue以外的资源占用，定时器，延时器..."); //结合组件使用
+        },
+        destroyed() {
+          console.log("destory，卸载后");
+        },
+      });
+    </script>
+  </body>
+</html>

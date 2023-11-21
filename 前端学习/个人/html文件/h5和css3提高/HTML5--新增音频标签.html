@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5--新增音频标签</title>
+
+    <!-- src: 音频文件的URL地址。
+
+controls: 显示播放控件，包括播放/暂停、音量控制、播放速度等。常见
+
+autoplay: 自动播放音频。常见
+
+loop: 循环播放音频。常见
+
+muted: 静音播放音频。
+
+preload: 音频的预加载方式，可选值有：none、metadata、auto。
+
+currentTime: 获取或设置当前播放时间。
+
+duration: 获取音频总时长。
+
+volume: 获取或设置音频的音量大小，取值范围为0.0到1.0。
+
+paused: 判断音频是否处于暂停状态。
+
+ended: 判断音频是否已经播放完毕。 -->
+</head>
+
+<body>
+    <audio src="宋茜 - 屋顶着火.ogg" autoplay="autoplay" controls="controls"> </audio>
+    <div>音频和视频标签使用方法基本一致
+        浏览器的支持情况不同
+        谷歌浏览器把音频和视频自动播放禁止了
+        我们可以使用muted属性来静音播放视频，音频不可以，音频可以通过js解决
+        视频标签是重点，我们经常设置自动播放，不使用controls控件，循环和设置大小属性
+    </div>
+</body>
+
+</html>

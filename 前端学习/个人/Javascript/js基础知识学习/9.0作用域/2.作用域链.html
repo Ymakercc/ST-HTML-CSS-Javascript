@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域链</title>
+    <script>
+        //作用域链（Scope Chain）是指在 JavaScript 中查找变量的机制。
+        // 当代码在一个作用域中查找一个变量时，如果当前作用域没有该变量，
+        // 它会沿着嵌套的作用域层级逐级向上查找，直到找到该变量或达到全局作用域。
+        // 这个查找变量的过程就称为作用域链。JavaScript 中的作用域链是由函数的嵌套关系决定的。
+        // 每当在函数内部声明一个变量时，JavaScript 引擎会将该变量保存在一个叫做作用域（Scope）的内部数据结构中。
+        // 每个作用域都有一个对外部作用域的引用，形成了一个链式结构，就是作用域链。
+
+        //代码解析
+        function outerFunction() {
+            var outerVar = "I am from outer function";
+
+            function innerFunction() {
+                var innerVar = "I am from inner function";
+                console.log(innerVar); // 可以在innerFunction内部访问innerVar
+                console.log(outerVar); // 可以在innerFunction内部访问outerVar，通过作用域链向上查找
+            }
+
+            innerFunction();
+
+            // console.log(innerVar); // 这里尝试在outerFunction内部访问innerVar会导致错误
+        }
+
+        outerFunction();
+        // console.log(outerVar); // 这里尝试在全局作用域访问outerVar会导致错误
+        // console.log(innerVar); // 这里尝试在全局作用域访问innerVar会导致错误
+
+        //讲解
+        // 在上面的例子中，innerFunction 是在 outerFunction 中定义的。当 innerFunction 内部访问变量时，它会首先在自己的作用域中查找变量，
+        // 如果找不到，就会通过作用域链向上查找，从 outerFunction 的作用域中找到 outerVar 变量。
+        // 然而，innerFunction 中的变量 innerVar 对于 outerFunction 是不可见的，因为它是在 innerFunction 的作用域中声明的
+        // 所以在 outerFunction 中无法访问。
+
+        // 需要注意的是，作用域链是从内向外查找的，而不是从外向内查找。这意味着在内部作用域中可以访问外部作用域的变量，但反过来是不行的。
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

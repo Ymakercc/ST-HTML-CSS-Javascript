@@ -1,0 +1,74 @@
+/* ^css初始化 */
+* {
+    /* 取消内外边距 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+em,
+i {
+    /* em i斜体文字不倾斜 */
+    font-style: normal;
+}
+
+li {
+    /* li没有小圆点 */
+    list-style: none;
+}
+
+img {
+    /* 照顾低版本浏览器 */
+    border: 0;
+    /* 取消图片默认基线对齐有缝隙问题 */
+    vertical-align: middle;
+}
+
+button {
+    /* 把按钮的鼠标样式改为小箭头 */
+    cursor: pointer;
+}
+
+input,
+button {
+    border: 0;
+    /* 去掉button的默认边框 */
+    outline: none;
+    /* 去掉iinput的默认选中边框 */
+}
+
+body {
+    /* \5b8b\4f53就是宋体的意思 不写中文照顾兼容性 */
+    font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\5b8b\4f53", sans-serif;
+    /* css3属性 文字放大不失真 抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    background: #fff
+}
+
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f30213
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    /* clearfix浮动消除模块 */
+}
+
+/* 直接调用 消除浮动 */
+/* 消除浮动:子浮动自动撑大父盒子 不用为父盒子设置高度 */
+.clearfix {
+    *zoom: 1;
+    /* 照顾ie6,7 */
+}

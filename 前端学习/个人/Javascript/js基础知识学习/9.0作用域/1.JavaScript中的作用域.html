@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript中的作用域</title>
+    <script>
+        //概念 变量在某个范围内起作用的区域
+
+        //1.0全局作用域（Global Scope）：
+        // 全局作用域是指在代码中任何地方都可以访问的变量。
+        // 在函数外部声明的变量通常具有全局作用域。这意味着在整个代码中，
+        // 无论在哪里，都可以访问这些变量。
+        var globalVar = 10;
+
+        function exampleFunction() {
+            console.log(globalVar); // 可以在函数内部访问全局变量globalVar
+        }
+
+        exampleFunction(); // 输出：10
+        console.log(globalVar); // 也可以在函数外部访问全局变量globalVar
+
+        //2.0局部作用域（函数作用域）：
+        // 局部作用域是指在函数内部声明的变量，它们只能在函数内部访问，
+        // 无法在函数外部访问。每当你在函数中声明一个新变量，这个变量就会具有局部作用域，
+        // 只在函数的范围内有效。
+        function exampleFunction() {
+            var localVar = 20; // 局部变量localVar在函数内部声明
+            console.log(localVar); // 可以在函数内部访问局部变量localVar
+        }
+
+        exampleFunction(); // 输出：20
+        // console.log(localVar); // 这里尝试在函数外部访问局部变量localVar会导致错误
+
+        //块级作用域（ES6新增）：
+        // 在ES6（ECMAScript 2015）中，引入了let和const关键字，它们可以在块级作用域中声明变量。
+        // 块级作用域是指在{ } 中声明的变量，例如在if语句、循环或任何代码块中声明的变量。
+        if (true) {
+            var x = 10; // 使用var声明的变量具有函数作用域，不是块级作用域
+            let y = 20; // 使用let声明的变量具有块级作用域
+            const z = 30; // 使用const声明的变量也具有块级作用域
+        }
+
+        console.log(x); // 输出：10
+        // console.log(y); // 这里尝试在块级作用域外部访问let声明的变量会导致错误
+        // console.log(z); // 这里尝试在块级作用域外部访问const声明的变量会导致错误
+
+        // 总结：
+
+        // 全局作用域中的变量在整个代码中都可访问。
+        // 局部作用域中的变量只在函数内部可访问。
+        // 块级作用域中使用let和const声明的变量只在当前代码块内部可访问。
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

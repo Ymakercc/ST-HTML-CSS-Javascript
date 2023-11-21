@@ -1,0 +1,51 @@
+.d0 {
+    width: 1200px;
+    margin: 0px auto;
+    margin-bottom: 100px;
+}
+
+.w1 {
+    width: 1200px;
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.p1 h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.p1 p {
+    font-size: 12px;
+
+}
+
+.p1 {
+    text-align: center;
+    width: 1200px;
+}
+
+.d1,
+.d2 {
+    float: left;
+    width: 510px;
+    height: 650px;
+}
+
+.d1 {
+    margin-right: 150px;
+    margin-left: 10px;
+}
+
+.t1 {
+    width: 1200px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.t1 p {
+    font-size: 16px;
+    padding-top: 10px;
+}

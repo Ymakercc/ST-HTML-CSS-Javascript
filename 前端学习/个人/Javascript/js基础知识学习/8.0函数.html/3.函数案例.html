@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数案例</title>
+    <script>
+        //利用函数求俩个数中最大值
+        function getMax(num1, num2) {
+            if (num1 > num2) {
+                return num1;
+            } else {
+                return num2;
+            }
+        }
+        console.log(getMax(200, 899));
+
+        //利用函数求数组中的最大值
+        function gteArrMax(arr) {
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        var re = gteArrMax([5, 25, 85, 88, 779, 556, 223]);
+        console.log(re);
+
+        //利用函数封装翻转数组
+        function reverse(arr) {
+            var newArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr
+        }
+        var arr1 = reverse([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        console.log(arr1);
+
+        //函数封装冒泡排序
+        function sort(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr2 = sort([1, 4, 2, 9]);
+        console.log(arr2);
+
+        //函数可以调用另一个函数
+        function add(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+
+        function cheng(num) {
+            var re = add(2, 3);
+            var sumber = num * re;
+            return sumber;
+        }
+        var result = cheng(8);
+        console.log(result);
+
+        //用户输入年份，输出当前年份二月的天数
+        function backDay() {
+            var year = prompt('请输入您的年份')
+            if (isRunYear()) {
+                alert('当前年份是闰年2月份有29天')
+            } else {
+                alert('当前年份是平年2月份有28天')
+            }
+        }
+        backDay();
+
+        function isRunYear(year) {
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = ture;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

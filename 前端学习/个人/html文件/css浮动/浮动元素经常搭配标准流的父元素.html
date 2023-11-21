@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素经常搭配标准流的父级元素</title>
+    <!-- 网页布局的第一准则：先用标准流的父级元素排列上下位置，之后内部子元素采取浮动排列左右位置 -->
+    <style>
+        .father {
+            width: 300px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son1 {
+            float: left;
+            width: 150px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .son2 {
+            float: left;
+            width: 150px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son1">儿子1</div>
+        <div class="son2">儿子2</div>
+    </div>
+</body>
+
+</html>

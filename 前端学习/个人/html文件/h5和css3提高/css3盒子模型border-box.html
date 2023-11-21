@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3盒子模型border-box</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            box-sizing: content-box;
+        }
+
+        P {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            /* css3盒子模型 盒子最终的大小就是width 200的大小 */
+            /* 该属性不会使padding和border撑大盒子，但是padding和border的值不能超过width的值 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>劳拉</div>
+    <p>克劳凧</p>
+</body>
+
+</html>

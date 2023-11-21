@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch发送AJAX请求</title>
+</head>
+
+<body>
+    <button>AJAX请求</button>
+    <script>
+        const btn = document.querySelector('button');
+
+        btn.onclick = function () {
+            //发送GET请求
+            fetch('http://127.0.0.1:8000/fetch-server')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应错误');
+                    }
+                    return response.json(); // 将响应解析为 JSON
+                })
+                .then(data => {
+                    // 在这里处理获取到的数据
+                    console.log(data);
+                })
+                .catch(error => {
+                    // 处理错误
+                    console.error('请求错误:', error);
+                });
+
+            //发送POST请求
+            fetch('http://127.0.0.1:8000/fetch-server', {
+                method: 'POST', // 指定请求方法为 POST
+                headers: {
+                    'Content-Type': 'application/json', // 设置请求头
+                },
+                body: JSON.stringify({ username: 'Yamiker', password: '1111111' }), // 设置请求体
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应错误');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('请求错误:', error);
+                });
+
+        }
+    </script>
+</body>
+
+</html>

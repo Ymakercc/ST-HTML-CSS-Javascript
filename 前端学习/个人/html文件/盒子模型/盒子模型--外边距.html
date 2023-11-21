@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型--外边距</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .one {
+            margin-bottom: 20px;
+        }
+
+        .two {
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        /* margin的简写：
+                    margin:5px 一个值，代表上下左右都有5px的内边距 
+                    margin:5px 10px 两个值，代表上下5px，左右5px
+                    margin:5px 10px 20px 三个值，上5px，左右10px，下20px
+                    margin:5px 10px 20px 30px 上5px，右10px，下20px，左30px（顺时针旋转）
+            外边距的典型应用：外边距可以让块级盒子水平居中，但要满足两个条件
+                                                                       1.盒子必须指定了宽高
+                                                                       2.盒子左右外边距都设置了auto（自适应） 
+                该方法适用于块级元素，若要使行内元素或者行内块元素水平居中则需要给其父级元素添加text-align：center即可。*/
+    </style>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="02">2</div>
+    <div class="two">利用margin实现盒子水平居中</div>
+</body>
+
+</html>

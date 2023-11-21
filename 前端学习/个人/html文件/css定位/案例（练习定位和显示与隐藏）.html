@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例（练习定位和显示与隐藏）</title>
+    <style>
+        .yelan {
+            position: relative;
+            width: 450px;
+            height: 300px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            /* 隐藏遮罩层 */
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3) url(bofang.png) no-repeat center;
+        }
+
+        /* 当鼠标经过夜阑时，遮罩层显示出来。 */
+        .yelan:hover .mask {
+            /* 显示元素 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yelan">
+        <div class="mask"></div>
+        <img src="夜阑.jpg" alt="">
+    </div>
+</body>
+
+</html>

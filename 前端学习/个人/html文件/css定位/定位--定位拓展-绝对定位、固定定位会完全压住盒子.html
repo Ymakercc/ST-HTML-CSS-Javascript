@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位（固定定位）会完全压住盒子</title>
+    <style>
+        .box {
+            /* float: left;
+            浮动的元素只会压住标准流的盒子，但不会压住下面标准流盒子里面的文字、图片。 */
+            position: absolute;
+            /* 绝对定位（固定定位）会完全压住盒子包括里面的内容 */
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <p>我爱你亲爱的菇凉55555555555</p>
+</body>
+
+</html>

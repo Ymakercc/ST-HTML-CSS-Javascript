@@ -1,0 +1,41 @@
+X
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: pink !important;
+        }
+
+        /* 权重无穷大 */
+        .mm {
+            color: red;
+        }
+
+        /*当一个元素指定多个选择器，就会有优先级的产生 
+        选择器相同，则执行层叠性（就近原则）
+        选择器不同，则根据选择器权重执行*/
+
+        #mm1 {
+            color: rgb(89, 0, 255);
+        }
+
+        /* 子元素继承的权重为0 */
+        /* 以后看标签到底执行哪个样式，就先看这个标签有没有被直接选出来 */
+        /* a链接浏览器默认指定了一个样式 */
+        /* 权重叠加：如果是复合选择器，则会有权重叠加，需要计算权重
+        复合选择器要将权重进行叠加在比较 ，权重虽然会叠加但永远不会进位*/
+    </style>
+</head>
+
+<body>
+    <div class="mm" id="mm1">我爱霉霉</div>
+    <a href="">我爱霉霉</a>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+    <script>
+        // for (var i = 1; i <= 100; i++) {
+        //     console.log('袁乙超永远的神');
+        // }
+        //案例让用户控制输出的次数
+        // var times = prompt('请输入次数')
+        // for (var i = 1; i <= times; i++) {
+        //     console.log('Ymaker');
+        // }
+        //for循环执行不同的代码
+        // for (var a = 1; a <= 100; a++) {
+        //     console.log('这个人今年' + a + '岁了');
+        // }
+
+        //数字累加
+        // var sum = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     sum += i;
+        // }
+        // console.log(sum);
+
+        //
+        var num = prompt('请输入班级人数')
+        var sum = 0;
+        var average = 0;
+        // var sorce = prompt('请输入学生成绩')
+        for (var i = 1; i <= num; i++) {
+            var score = prompt('请输入第' + i + '个学生的成绩')
+            sum += parseFloat(score);
+        }
+        average = sum / num;
+        alert('班级总成绩是' + sum);
+        alert('班级平均分是' + average);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

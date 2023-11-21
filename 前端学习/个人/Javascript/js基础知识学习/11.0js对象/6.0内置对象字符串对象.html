@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串对象</title>
+    <script>
+        //基本包装类型：把简单数据类型包装成复杂数据类型
+        //执行过程 
+        //1.把简单数据类型包转为复杂数据类型
+        var temp = new String('ymaker');
+        //2.把临时变量的值赋值给str
+        str = temp;
+        //3.销毁这个临时变量
+        temp = null;
+
+        //字符串的不可变性，因为其不可变性不要大量拼接字符串
+
+        //方法：根据字符串返回位置 str.indexOf('要查找的字符',[起始地点位置])
+        //案例 查找o出现的位置和次数
+        var str = 'abcdroofeodgrwopp';
+        var index = str.indexOf('o');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('o', index + 1);
+        }
+        console.log(num);
+
+        //方法2 根据位置返回字符 charAt(index)
+        var str = 'yamker';
+        console.log(str.charAt(3));
+        //遍历所有字符
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+        //方法3chartCodeAt(index) 返回相应索引号的字符ASCII值 目的：判断用户按了哪个键
+        console.log(str.charCodeAt(0));
+
+        //案例 判断一个字符串中出现最多的字符，并统计
+        var str = 'abcdroofeodgrwopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                a[chars]++;
+            }
+            else {
+                o[chars] = 1
+            }
+        }
+        //遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log(ch);
+
+        //字符串操作方法 
+        //1.拼接字符串contact(str1,str2)
+        //2.截取字符串substr('截取的起始位置','截取几个字符')
+        //3.替换字符串replace('被替换的字符串'，‘替换为的字符串)
+        //4.字符串转换为数组split('分隔符')
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

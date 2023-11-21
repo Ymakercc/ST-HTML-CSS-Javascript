@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示与隐藏--overflow溢出显示与隐藏</title>
+    <!-- 该属性指定了如果内容溢出一个元素的框时，会发生什么。 -->
+    <!-- 当盒子有定位时慎用该属性 -->
+    <style>
+        .twitter {
+            /* overflow: hidden; 隐藏溢出的部分*/
+            /* scroll溢出的部分显示滚动条，不溢出也显示滚动条 */
+            /* overflow: scroll; */
+            /* 当出现溢出的时候出现滚动条，不溢出不显示滚动条 */
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            border: 3px solid pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="twitter">Twitter可以让用户更新不超过140个字符的消息（除中文、日文和韩语外已提高上限至280个字符 [2]
+        ），这些消息也被称作“推文（Tweet）”，Twitter被形容为“互联网的短信服务”。这个服务是由杰克·多西（Jack Dorsey）在2006年3月与合伙人共同创办并在当年7月启动的。 [3]
+        Twitter在全世界都非常流行， Twitter发布的财报显示，截至2020年第三季度，Twitter的可货币化日活跃用户达1.87亿 [4] </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预解析讲解</title>
+    <script>
+        //JavaScript 中的预解析（Hoisting）是一种特殊的行为，
+        // 它是 JavaScript 解释器在代码执行之前进行的一个阶段。
+        // 在预解析阶段，JavaScript 解释器会将变量声明（使用 var 关键字）、函数声明和形参提升到其所在作用域的顶部，使得它们在整个作用域内可用，
+        // 无论其实际位置在哪里。
+
+        //预解析的过程可以分为以下几个步骤：
+        //1.变量声明的提升：
+        // 在预解析阶段，JavaScript 解释器会找到所有 var 关键字声明的变量，
+        // 并将它们提升到当前作用域的顶部。但是只有声明会被提升，赋值不会被提升。
+        console.log(a); // 输出：undefined
+        var a = 10;
+        console.log(a); // 输出：10
+        //实际执行时的处理：
+        var a; // 变量声明被提升，但是没有赋值
+        console.log(a); // 输出：undefined
+        a = 10; // 赋值操作在原来的位置执行
+        console.log(a); // 输出：10
+
+        //2.函数声明的提升：
+        // 与变量声明类似，JavaScript 解释器会将所有函数声明提升到当前作用域的顶部。
+        foo(); // 输出：Hello, I am a function.
+
+        function foo() {
+            console.log("Hello, I am a function.");
+        }
+        // 实际执行时的处理：
+        function foo() {
+            console.log("Hello, I am a function.");
+        }
+
+        foo(); // 输出：Hello, I am a function.
+
+        //需要注意的是，虽然变量和函数声明在预解析阶段被提升了，
+        // 但是它们的赋值和实际函数定义保留在原来的位置。因此，在
+        // 使用变量和函数时，最好在其声明之后进行，以避免出现意外行为。
+        // 同时，let 和 const 关键字声明的变量不存在预解析，因为它们具有块级作用域，并且不会发生变量提升。
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

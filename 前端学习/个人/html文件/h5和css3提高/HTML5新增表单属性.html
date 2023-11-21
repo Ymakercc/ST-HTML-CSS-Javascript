@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增表单属性</title>
+    <!-- 新增表单属性： -->
+    <!-- 
+autocomplete：用于控制自动填充功能的开关。取值为"on"或"off"。
+
+autofocus：用于指定页面加载后自动获得焦点的控件。(常用)
+
+placeholder：用于设置表单控件的占位符文本，提示用户输入内容的格式或内容。(常用)
+
+required：用于指定表单控件是否必填。如果设置了该属性，用户必须填写该控件才能提交表单。(常用)
+
+pattern：用于指定表单控件的输入格式，可以用正则表达式来限制输入内容。
+
+min和max：用于设置数值控件的最小和最大值，或日期控件的最早和最晚日期。
+
+step：用于设置数值控件的步长，即用户每次增加或减少数值时的增量。
+
+multiple：用于指定文件上传控件是否允许选择多个文件。(常用)
+
+form：用于指定表单控件所属的表单元素。可以将表单控件放在任何地方，而不必将其放在<form>元素内部。 -->
+    <style>
+        /* 修改placeholder里面字体的颜色 */
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="search" name="" id="" required="required" placeholder="我爱你" autofocus="autofocus">
+        <input type="file" name="" id="" multiple="multiple">
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

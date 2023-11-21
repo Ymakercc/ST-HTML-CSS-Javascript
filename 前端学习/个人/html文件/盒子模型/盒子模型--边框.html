@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型--边框</title>
+    <style>
+        .d1 {
+            width: 300px;
+            height: 300px;
+            border-width: 20px;
+            border-style: solid;
+            border-color: rgb(0, 136, 255);
+        }
+
+        /* 分别为盒子边框的粗细、边框样式、边框颜色 solid为实现边框、dashed为虚线边框。dotted为点线边框 */
+        /* 边框简写没有顺序：boder: 1px solid red
+        边框可以单独定义某一条边如：border-top: 1px soild red （只定义上边框，其余同理）*/
+        .d2 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border: 10px solid red;
+        }
+
+        /* 边框会影响盒子的实际大小 */
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+
+    </div>
+    <div class="d2">
+
+    </div>
+</body>
+
+</html>

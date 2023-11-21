@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .d0 {
+            width: 1240px;
+            margin: 0px auto;
+        }
+
+        .d1 {
+            height: 50px;
+            margin: auto;
+            background-color: rgb(226, 43, 220);
+        }
+
+        ul {
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .u1 li {
+            height: 50px;
+            width: 124px;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+            float: left;
+        }
+
+        .u1 li:hover {
+            background-color: rgb(77, 4, 50);
+        }
+
+        .d2 {
+            margin: 20px;
+            float: left;
+        }
+
+        .d2 .u2 li {
+            display: block;
+            width: 450px;
+            height: 45px;
+            background-color: rgb(241, 166, 213);
+            margin-top: 5px;
+            line-height: 50px;
+            padding-left: 5px;
+
+        }
+
+        .d2 .u2 li:hover {
+            background-color: rgb(212, 9, 138);
+        }
+
+        .d3 {
+            float: left;
+            margin: 20px;
+        }
+
+        .d3 h3 {
+            display: block;
+            width: 450px;
+            height: 45px;
+            background-color: rgb(241, 166, 213);
+            margin-top: 5px;
+            line-height: 50px;
+            padding-left: 5px;
+        }
+
+        p {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .d4 {
+            width: 1240px;
+            height: 50px;
+            background-color: dimgrey;
+            padding-left: 15px;
+            padding-top: 15px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body bgcolor=" pink">
+    <div class="d0 clearfix">
+        <div class="d1">
+            <ul class="u1">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">其他</a></li>
+                <li><a href="#">其他</a></li>
+                <li><a href="#">其他</a></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+        </div>
+        <div class="d2">
+            <ul class="u2">
+                <li>分页1</li>
+                <li>分页2</li>
+                <li>分页3</li>
+                <li>分页4</li>
+            </ul>
+        </div>
+        <div class="d3">
+            <h3>标题</h3>
+            <p>conten</p>
+        </div>
+    </div>
+    <div class="d4">footer</div>
+</body>
+
+</html>

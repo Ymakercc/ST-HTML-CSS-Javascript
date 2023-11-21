@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            widows: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 默认值为透明 */
+            background-image: url();
+            /* none为默认值，url插入图片地址 */
+            background-repeat: no-repeat;
+            /* 图片平铺（默认平铺）no-repeat|repeat-x|repeat-y(x沿着x平铺，y沿着y平铺) */
+            background-position: 0 0;
+            /* background-position: x y ; x和y可以使用方位名词或者精确单位*/
+            background-position: center top;
+            /* 用方位名词顺序无关 ，如果只写一个值，另一个值默认居中*/
+            background-position: 0 0;
+            /* 精确定位一定严格按照x-y的顺序 */
+            background-position: center 20px;
+            /* 混合单位使用第一个x值第二个y值  */
+            background-attachment: fixed;
+            /* background-attachment: fixed;   scroll背景图片随对象内容滚动；fixed背景图像固定 */
+            background: rgba(red, green, blue, alpha);
+            /* 改变alpha的值0~1的范围调整透明度 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

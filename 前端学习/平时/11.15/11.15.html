@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      .d0{
+        position: relative;
+        height: 80px;
+        width: 1920px;
+        border: 0px;
+        background-color: black;
+      }
+
+      ul{
+        padding: 0px;
+      }
+
+      a{
+        color: aliceblue;
+        height: 80px;
+        width: 240px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 80px;
+      }
+
+     li {
+        height: 80px;
+        width: 240px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 80px;
+        float: left;
+        font-size: 20px;
+        box-sizing: border-box;
+      }
+
+      li:hover{
+        border-bottom: 10px solid #fe7500;
+      }
+
+      ul li ul{
+        display: none;
+      }
+
+      ul li:hover ul{
+        display: block;
+      }
+      
+    </style>
+</head>
+<body>
+   <div class="d0">
+      <ul>
+        <li><a href="#">网站首页</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">资质认定</a></li>
+        <li><a href="#">政府扶持</a></li>
+        <li><a href="#">知识产权</a>
+               <ul class="u2">
+                <li>知识产权申请</li>
+                <li>知识产权转让</li>
+                <li>技术咨询</li>
+                <li>技术成果鉴定</li>
+               </ul>
+        </li>
+        <li><a href="#">上市服务</a></li>
+        <li><a href="#">人才招聘</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+   </div>
+</body>
+</html>

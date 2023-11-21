@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location常见属性</title>
+</head>
+
+<body>
+    <!--URL的一般语法格式为:
+    protocol://host[:port]/path/[?cuery]#fragment-->
+    <!--
+    protoco:通信协议 常用的http,ftp,maito等
+    host:主机(域名)www.itheima.com
+    port:端口号 可选，省略时使用方案的默认端口 如http的默认端口为80
+    path:路径 由零或多个/符号隔开的字符串，一般用来表示主机上的一个目录或文件地址
+    query:参数 以键值对的形式,通过 & 符号分隔开来
+    fragment:片段 #后面内容 常见于链接 锚点
+    -->
+    <button>点击</button>
+    <div></div>
+    <script>
+        //案例：隔几秒后自动跳转页面
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+
+
+        // 定义倒计时的时间（秒数）
+        var timer = 5;
+
+        // 显示初始倒计时文本
+        div.innerHTML = '您将在' + timer + '秒钟之后跳转到首页';
+
+        // 点击按钮时触发跳转
+        btn.addEventListener('click', function () {
+            location.href = 'http://www.itcast.cn';
+        });
+
+        // 每隔一秒更新倒计时文本
+        var countdownInterval = setInterval(function () {
+            if (timer === 0) {
+                clearInterval(countdownInterval); // 清除定时器
+                location.href = 'http://www.itcast.cn'; // 跳转到指定页面
+            } else {
+                timer--;
+                div.innerHTML = '您将在' + timer + '秒钟之后跳转到首页';
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

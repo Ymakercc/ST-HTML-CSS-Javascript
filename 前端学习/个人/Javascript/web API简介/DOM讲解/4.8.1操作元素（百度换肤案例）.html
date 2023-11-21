@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度换肤案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(one.jpg) no-repeat center top;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: aliceblue;
+            width: 410px;
+            padding-top: 3px;
+        }
+
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+            /* 改变鼠标样式 */
+        }
+
+        .baidu img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="one.jpg" alt=""></li>
+        <li><img src="two.jpg" alt=""></li>
+        <li><img src="three.jpg" alt=""></li>
+        <li><img src="four.jpg" alt=""></li>
+    </ul>
+    <script>
+        //案例分析：这个案例练习的是给一组元素注册事件
+        //给4个小图片利用循环注册点击事件
+        //当我们点击了这个图片，让我们页面背景改为当前的图片
+        //核心算法:把当前图片的src 路径取过来，给body做为背景即可
+
+
+        //1.获取元素
+        var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        //2.循环注册事件
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                //把this.src给body
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>

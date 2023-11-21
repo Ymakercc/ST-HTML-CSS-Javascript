@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         .d0{
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+        .clearfix::after{
+            content:"" ;
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix{
+            *zoom: 1;
+        }
+
+        p{
+            padding: 0px 10px;
+        }
+
+        .d1{
+            width: 800px;
+            height: 360px;
+            float: left;
+            /* border-bottom: 1px solid grey;
+            border-top: 1px solid gray;
+            border-left: 1px solid grey; */
+        }
+
+        .i1{
+            float: left;
+            width: 360px;
+            height: 360px;
+        }
+
+        .i1 img{
+            width: 360px;
+            height: 360px;
+        }
+
+        .t1 ,.t2{
+            background-color: coral;
+            height: 50px;
+            margin: 0px;
+            padding: 15px;
+            color: aliceblue;
+            font-size: 20px;
+
+        }
+
+
+        .d2{
+            width: 800px;
+            height: 360px;
+            float: right;
+            /* border-bottom: 1px solid grey;
+            border-top: 1px solid gray;
+            border-left: 1px solid grey;
+            border-right: 1px solid grey; */
+        
+        }
+
+        .i2{
+            float: right;
+            width: 360px;
+            height: 360px;
+        }
+
+        .i2 img{
+            width: 360px;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d0">
+        <div class="d1 clearfix">
+            <div class="t1"><h3>Taylor Swift's bio</h3></div>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            </p>
+        </div>
+        <div class="i1 clearfix"><img src="i.jpg" alt=""></div>
+
+        <div class="d2 clearfix">
+            <div class="t2"><h3>Taylor Swift's bio</h3></div>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            </p>
+        </div>
+        <div class="i clearfix"><img src="i.jpg" alt=""></div>
+    </div>
+</body>
+</html>

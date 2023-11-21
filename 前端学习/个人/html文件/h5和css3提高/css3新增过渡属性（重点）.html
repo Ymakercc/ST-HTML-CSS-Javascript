@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3新增过渡属性（重点）</title>
+    <!-- 该属性经常于:hover搭配使用 -->
+    <!-- 过渡属性详解： -->
+    <!-- CSS3 中新增的过渡（Transition）属性可以在元素从一种样式转换为另一种样式时，实现平滑的过渡效果。过渡可以设置元素的各种属性（如颜色、大小、透明度、位置等）在一段时间内发生变化的动画效果。
+
+过渡属性包括：
+
+transition-property：指定要过渡的 CSS 属性名称，可以是一个或多个属性。（设置想要变化的属性）
+transition-duration：指定过渡效果持续的时间，单位为秒（s）或毫秒（ms）。（变化所需花费的时间）
+transition-timing-function：指定过渡效果的时间函数，用于控制过渡效果速度的变化。（运动曲线默认ease逐渐慢下来）
+transition-delay：指定过渡效果开始前的延迟时间，单位为秒（s）或毫秒（ms）。 （设置延迟触发时间） -->
+    <!-- 口诀：谁要过渡给谁加 -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transition: width .5s, height 1.5s; */
+            /* 如果想要所有属性都发生改变，属性写all就行 */
+            transition: all 1.5s;
+        }
+
+        div:hover {
+            width: 300px;
+            height: 500px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

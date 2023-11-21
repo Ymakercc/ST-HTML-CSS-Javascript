@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: '微软雅黑';
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .d0 {
+            width: 1548px;
+            margin: 0px auto;
+        }
+
+        .header {
+            height: 50px;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .logo {
+            float: left;
+            width: 60px;
+            height: 60px;
+            background-image: url(logo.jpg);
+            margin-top: 10px;
+        }
+
+        .nav {
+            float: right;
+            margin-top: 27px;
+        }
+
+        .u1 li {
+            float: left;
+            /* padding-left: 100px;
+    padding-right: 100px; */
+            width: 232px;
+            text-align: center;
+            border-right: 1px solid black;
+        }
+
+        .u1 li:hover a {
+            color: red;
+        }
+
+        .container {
+            width: 1548px;
+        }
+
+        .fenmian {
+            height: 600px;
+            background-image: url(banner.jpg);
+            width: 1548px;
+            margin-top: 25px;
+            margin-right: 372px;
+        }
+
+        .fenmian2 h1 {
+            font-size: 18px;
+        }
+
+        .fenmian2 p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .left,
+        .middle,
+        .right {
+            float: left;
+            width: 516px;
+            height: 616px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .footer {
+            margin-top: 150px;
+
+        }
+
+        .d1 {
+            float: left;
+            width: 100px;
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d0 clearfix">
+        <div class="header clearfix">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul class="u1">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container clearfix">
+            <div class="fenmian"></div>
+            <div class="fenmian2">
+                <div class="left">
+                    <h1>个人荣誉</h1>
+                    <p>Personal Honors</p>
+                    <img src="1.jpg" alt="">
+                </div>
+                <div class="middle">
+                    <h1>获奖记录</h1>
+                    <p>Record of Awards</p>
+                    <img src="2.jpg" alt="">
+                </div>
+                <div class="right">
+                    <h1>个人作品</h1>
+                    <p>Individual Works</p>
+                    <img src="3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer clearfix">
+            <div class="d1"><img src="logo.jpg" alt=""></div>
+            <div class="d2">
+                <p>Taylor Swift's 10th studio album, Midnights, was released on October 21, 2022. Taylors described the
+                    album as a journey between dreams and nightmares, describing her 13 sleepless nights. Midnights was
+                    still written and produced by his old friend Jack Antonoff, and William Bowery was also involved in
+                    Vigilante Shit and Sweet Nothing, Even more surprising was the invitation for Lana Del Rey to
+                    collaborate on the song "Snow on the Beach".</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象属性</title>
+    <script>
+        class People {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            sayHello() {
+                console.log("Hello, my name is " + this.firstName);
+            }
+        }
+
+        var Ymaker = new People('yuan', 'yichao', '20');
+        for (var k in Ymaker) {
+            console.log(k);
+            console.log(Ymaker[k]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

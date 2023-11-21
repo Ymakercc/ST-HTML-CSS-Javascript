@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments的使用</title>
+    <script>
+        //arguments是一个内置对象用于存储传递的所有实参
+        //arguments的使用
+        //只有函数才有，每个函数都已经内置好了该方法
+        function fu() {
+            console.log(arguments);
+            //可以使用数组的方式遍历arguments
+        }
+        fu(1, 2, 3, 4, 5, 6);
+        //arguments按照数组的方式存储数据，但是是伪数组
+        //1.伪数组具有length属性
+        //2.按照索引的方式进行存储
+        //3.它没有真正数组的一些方法 pop() push()等
+
+        //案例
+        function getMax() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(1, 22, 187, 556, 395, 785, 958));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
